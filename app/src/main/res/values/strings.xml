@@ -1,0 +1,23 @@
+<resources>
+    <!-- Fragments Names -->
+    <string name="fragment_firstaid">FIRST AID</string>
+    <string name="fragment_home">HOME</string>
+
+    <string name="app_name">firstapp</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string-array name="search">
+        <item>Prantosh</item>
+        <item>Bikash</item>
+        <item>Jenish</item>
+        <item>Bijay</item>
+        <item>Om</item>
+    </string-array>
+
+    <string name="google_maps_api_key">AIzaSyDHf_zPvEKiYCCadZQmr60ceN44ibhalF0</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

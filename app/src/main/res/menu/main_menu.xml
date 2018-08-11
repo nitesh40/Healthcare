@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/map"
+            android:title="Map"/>
+
+        <item android:id="@+id/account"
+            android:icon="@drawable/ic_account"
+            android:title="Account" />
+
+        <item android:id="@+id/hospital"
+            android:icon="@drawable/ic_hospital"
+            android:title="Hospitals" />
+
+        <item android:id="@+id/email"
+            android:icon="@drawable/ic_email"
+            android:title="Email" />
+
+        <item android:id="@+id/chat"
+            android:icon="@drawable/ic_chat"
+            android:title="Chat" />
+
+
+        <item android:id="@+id/doctor"
+            android:icon="@drawable/ic_doctor"
+            android:title="Doctors"/>
+
+    </group>
+
+    <item android:title="Utilities">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+            <item android:id="@+id/pharmacy"
+                android:icon="@drawable/ic_pharmacy"
+                android:title="Pharmacy"/>
+
+            <item android:id="@+id/medicinealaram"
+                android:icon="@drawable/ic_medicinealaram"
+                android:title="Medicine Alaram"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+
+    <item android:title="Emergency Contacts">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+            <item android:id="@+id/ambulance"
+                android:icon="@drawable/ic_ambulance"
+                android:title="Ambulance"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:title="Others">
+
+        <menu>
+
+            <item android:id="@+id/share"
+                android:icon="@drawable/ic_share"
+                android:title="Share"/>
+
+            <item android:id="@+id/rate"
+                android:icon="@drawable/ic_rate"
+                android:title="Rate Us"/>
+
+            <item android:id="@+id/send"
+                android:icon="@drawable/ic_send"
+                android:title="Send"/>
+
+            <item android:id="@+id/help"
+                android:icon="@drawable/ic_help"
+                android:title="Help"/>
+
+            <item android:id="@+id/about"
+                android:icon="@drawable/ic_about"
+                android:title="About"/>
+
+            <item android:id="@+id/setting"
+                android:title="Setting"/>
+
+
+        </menu>
+
+    </item>
+
+</menu>

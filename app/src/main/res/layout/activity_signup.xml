@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
+    tools:context="com.nitesh.firstapp.MainActivity.Signup">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/snup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:text="Sign Up"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_margin="10dp"/>
+
+    <EditText
+        android:id="@+id/fname"
+        android:layout_below="@+id/snup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:inputType="textPersonName"
+        />
+
+    <!--EditText
+        android:id="@+id/lname"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="150dp" -->
+
+    <!--EditText
+        android:id="@+id/name"
+        android:layout_below="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:inputType="textAutoComplete"
+        /-->
+
+    <EditText
+        android:id="@+id/Pass"
+        android:layout_below="@+id/fname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:inputType="textPassword"/>
+    <EditText
+        android:id="@+id/CPass"
+        android:layout_below="@+id/Pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Conform Password"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:inputType="textPassword"/>
+    <EditText
+        android:id="@+id/email"
+        android:layout_below="@+id/CPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email Address"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:inputType="textEmailAddress"/>
+    <EditText
+        android:id="@+id/num"
+        android:layout_below="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:inputType="phone"/>
+    <EditText
+        android:id="@+id/address"
+        android:layout_below="@+id/num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:inputType="textPostalAddress"/>
+
+
+<!--CheckBox
+    android:id="@+id/checkbox"
+    android:layout_below="@+id/address"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Male"
+    android:textSize="15sp"-->
+
+    <!--CheckBox
+        android:id="@+id/checkbox1"
+        android:layout_below="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/checkbox"
+        android:layout_centerInParent="true"
+        android:text="Female"
+        android:textSize="15sp" -->
+
+    <!--RadioGroup
+        android:id="@+id/radiobutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/address">
+
+    <RadioButton
+        android:id="@+id/male"
+        android:layout_below="@id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Male" />
+
+    <RadioButton
+        android:id="@+id/female"
+        android:layout_below="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/male"
+        android:text="Female"/>
+    <-/RadioGroup-->
+
+<Button
+    android:id="@+id/signup"
+    android:layout_below="@+id/address"
+    android:layout_width="100dp"
+    android:layout_height="60dp"
+    android:text="Sign up"
+    android:layout_centerInParent="true"
+    android:background="@drawable/border"
+    android:textColor="@color/white"
+    android:textAllCaps="false"
+    android:layout_margin="20dp" />
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

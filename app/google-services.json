@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "723481869283",
+    "firebase_url": "https://firstapp-1966b.firebaseio.com",
+    "project_id": "firstapp-1966b",
+    "storage_bucket": "firstapp-1966b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:723481869283:android:94cc0f16a8d59dd4",
+        "android_client_info": {
+          "package_name": "com.nitesh.firstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "723481869283-49j7tpco6iufm8cukl9g15746b69k4ii.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nitesh.firstapp",
+            "certificate_hash": "0a056bd92b6f201489be29ea166067e2db0ef6bf"
+          }
+        },
+        {
+          "client_id": "723481869283-sci9jm15lsa10bthj4v0d3oc9kdsp5f0.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "723481869283-sci9jm15lsa10bthj4v0d3oc9kdsp5f0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlIvrWNppCoW2BK-qs4nrcHIy_PQUmX-Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "723481869283-sci9jm15lsa10bthj4v0d3oc9kdsp5f0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

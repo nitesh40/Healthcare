@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
+    android:id="@+id/mainlayoutt"
+    tools:context="com.nitesh.firstapp.MainActivity.EmailVerification">
+
+    <LinearLayout
+
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="false"
+        >
+
+        <TextView
+            android:id="@+id/eerrorfield"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="There was some error !!"
+            android:textColor="#e73c39"
+            android:textSize="25sp"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sendlayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        >
+
+
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:id="@+id/et_status"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="Name : "
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border"
+            android:id="@+id/et_num"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="Email :"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/et_uid"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="UID : "
+            android:background="@drawable/border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+        <!--<Button
+             android:layout_marginLeft="110dp"
+             android:layout_marginTop="0dp"
+             android:id="@+id/btn_send"
+             android:layout_width="135dp"
+             android:layout_height="35dp"
+             android:layout_weight="1"
+             android:background="@drawable/buttton_background"
+             android:text="SEND CODE "
+             android:textColor="#080808"
+             android:textSize="18sp"
+             android:textStyle="bold|italic" />-->
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+
+
+        <Button
+            android:id="@+id/ebtn_send"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:text="Verify Email"
+            android:background="@drawable/border"/>
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:id="@+id/ebtn_refresh"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:text="PROCEED"
+            android:background="@drawable/border"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

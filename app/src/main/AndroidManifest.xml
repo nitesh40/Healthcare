@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nitesh.firstapp">
+
+    <!-- permissions for map -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/heartlogo"
+        android:label="Health Service"
+        android:roundIcon="@mipmap/heartlogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MainActivity.Signup"
+            android:label="Sign up"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <!--
+            activity
+            android:name=".H"
+            android:label="Home Page" /
+        -->
+        <!-- android:theme="@style/AppTheme.NoActionBar"/> -->
+        <activity
+            android:name=".MainActivity.Forget"
+            android:label="Forget Password"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDHf_zPvEKiYCCadZQmr60ceN44ibhalF0" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".Homepage.Hospital"
+            android:label="Hospitals" />
+        <activity
+            android:name=".Homepage.Account"
+            android:label="Account"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".Homepage.Doctor"
+            android:label="Doctors" />
+        <activity
+            android:name=".Homepage.Pharmacy"
+            android:label="Pharmacy" />
+        <activity
+            android:name=".Homepage.MedicalAlarm.Medicalalarm"
+            android:label="Medicine Alaram" />
+        <activity
+            android:name=".Homepage.Ambulance"
+            android:label="Ambulance" />
+        <activity
+            android:name=".Homepage.Setting"
+            android:label="Setting" />
+        <activity
+            android:name=".MainActivity.HomePage"
+            android:label="Home Page" />
+        <activity android:name=".Map.Map" />
+        <activity
+            android:name=".Unused.MapActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".MainActivity.ScreenSplash"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Map.MapsActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".MainActivity.EmailVerification"></activity>
+    </application>
+
+</manifest>
