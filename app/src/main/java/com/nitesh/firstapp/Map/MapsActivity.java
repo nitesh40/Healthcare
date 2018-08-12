@@ -157,20 +157,20 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         setUpLocation();
 
-        mhospital.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nearbyplace("hospital");
-
-            }
-        });
+//        mschools.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                nearbyplace("hospital");
 //
-        mpharmacies.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                nearbyplace("pharmacies");
-            }
-        });
+//            }
+//        });
+//
+//        mpharmacies.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                nearbyplace("pharmacies");
+//            }
+//        });
 
         //search
 
@@ -300,11 +300,24 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             return true;
         }
         switch (item.getItemId()) {
-            case R.id.mapschool:
-                nearbyplace("school");
+            case R.id.maphospital:
+                nearbyplace("hospital");
 
 
         }
+        switch (item.getItemId()) {
+            case R.id.mapschool:
+                nearbyplace("hospital");
+
+
+        }
+        switch (item.getItemId()) {
+            case R.id.mappharmacies:
+                nearbyplace("pharmacy");
+
+
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -334,8 +347,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                                     //markerOptions.icon(BitmapDescriptorFactory.fromResource(R.drawable.marker_pharmacy));
                                     markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
 
-//                                else if (placeType.equals("school"))
-//                                    markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));HUE_MAGENTA
+                                else if (placeType.equals("school"))
+                                    markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA));
 
 
                                 mMap.addMarker(markerOptions);

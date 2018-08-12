@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -15,13 +16,16 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.nitesh.firstapp.Homepage.Account;
 import com.nitesh.firstapp.Homepage.Ambulance;
+import com.nitesh.firstapp.Homepage.Chat.Chat;
 import com.nitesh.firstapp.Homepage.Doctor;
 import com.nitesh.firstapp.Homepage.Hospital;
 import com.nitesh.firstapp.Homepage.MedicalAlarm.Medicalalarm;
 import com.nitesh.firstapp.Homepage.Pharmacy;
 import com.nitesh.firstapp.Homepage.Setting;
+import com.nitesh.firstapp.Homepage.Testing.About;
+import com.nitesh.firstapp.Map.MapsActivity;
 import com.nitesh.firstapp.R;
-import com.nitesh.firstapp.Unused.MapActivity;
+import com.nitesh.firstapp.TabFragment.Browse_fragment;
 
 public class HomePage extends AppCompatActivity {
     //Button mbuttton;
@@ -89,8 +93,14 @@ public class HomePage extends AppCompatActivity {
 //            }
 //        });
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        getSupportActionBar().setTitle("Health Service");
+        fragmentManager.beginTransaction().replace(R.id.content_main,new Browse_fragment())
+                .commit();
 
     }
+
+
 
 //    private void setupViewPager(){
 //        mPagerAdapter=new SectionsPagerAdapter(getSupportFragmentManager());
@@ -165,7 +175,7 @@ public class HomePage extends AppCompatActivity {
 
         switch (menuItem.getItemId()){
             case R.id.map:
-                Intent intent=new Intent(HomePage.this,MapActivity.class);
+                Intent intent=new Intent(HomePage.this, MapsActivity.class);
                 startActivity(intent);
         }
 
@@ -200,8 +210,18 @@ public class HomePage extends AppCompatActivity {
                 startActivity(intent);
         }
         switch (menuItem.getItemId()){
+            case R.id.about:
+                Intent intent=new Intent(HomePage.this,About.class);
+                startActivity(intent);
+        }
+        switch (menuItem.getItemId()){
             case R.id.setting:
                 Intent intent=new Intent(HomePage.this,Setting.class);
+                startActivity(intent);
+        }
+        switch (menuItem.getItemId()){
+            case R.id.chat:
+                Intent intent=new Intent(HomePage.this,Chat.class);
                 startActivity(intent);
         }
     }
