@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8E8E8"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gradStop"
+            android:layout_alignParentStart="true"
+            app:tabTextColor="@android:color/white"
+            app:tabSelectedTextColor="@android:color/black"
+            android:layout_alignParentLeft="true" />
+
+
+        <android.support.v4.view.ViewPager
+            android:layout_below="@+id/tablayout"
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

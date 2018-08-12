@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/grad_bg"
+    android:padding="10dp"
+    android:elevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="@drawable/grad_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/itemname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Name"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/itemid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="5dp"
+                android:text="ID"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/itemdesc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Decsription"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!--LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border"
+
+                android:text="Edit"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border"
+                android:text="Delete"
+                android:textColor="@color/white"/>
+
+        </LinearLayout-->
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
