@@ -19,7 +19,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -75,6 +74,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     long PROXIMITY_RADIUS = 15000;
     double latitude,longitude;
+    AutoCompleteTextView msearchimage;
 
 
     private static int UPDATE_INTERBAL = 5000;
@@ -84,7 +84,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private AutoCompleteTextView mSearchText;
     private ImageView mGps;
     ImageButton msearch;
-    EditText relLayout1;
+//    EditText relLayout1;
     Button mhospital,mschools,mpharmacies;
     DrawerLayout mdrwaer;
     ActionBarDrawerToggle mtoggle;
@@ -141,6 +141,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mpharmacies=findViewById(R.id.mappharmacies);
 
         msearch=findViewById(R.id.ic_magnify);
+        msearchimage=findViewById(R.id.input_search);
 
         mdrwaer=findViewById(R.id.drawer);
         mtoggle=new ActionBarDrawerToggle(this,mdrwaer,R.string.open,R.string.close);
@@ -240,11 +241,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     }
 
     public void onSearch(View view){
-        String location=relLayout1.getTag().toString();
+        String location=msearchimage.getText().toString();
 
         if(location.isEmpty()){
-            relLayout1.setError("Enter the location");
-            relLayout1.requestFocus();
+            msearchimage.setError("Enter the location");
+            msearchimage.requestFocus();
             return;
         }
         List<Address> addressList=null;
@@ -373,7 +374,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googlePlaceUrl.append("&radius="+PROXIMITY_RADIUS);
         googlePlaceUrl.append("&keyword="+placeType);
         googlePlaceUrl.append("&sensor=true");
-        googlePlaceUrl.append("&key="+"AIzaSyDbYb5986R2ZwCYBEetIVwgbZ-gz10QYRg");
+        googlePlaceUrl.append("&key="+"AIzaSyC7YsP3Ska-6RbngY4HoQlC8qo652q_0ho");
 
         Log.d("MapActivity", "url = "+googlePlaceUrl.toString());
 

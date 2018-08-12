@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nitesh.firstapp.Homepage.Ambulance">
+    tools:context="com.nitesh.firstapp.Homepage.Ambulance"
+    android:background="@drawable/grad_bg">
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_toStartOf="@+id/btn_add_room1"
+        android:layout_toLeftOf="@+id/btn_add_room1"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/white"
+        android:id="@+id/room_name_edittext1"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_add_room1"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Add room"
+        android:background="@drawable/border"
+        android:textColor="@color/white"/>
+
+    <ListView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/listViewA"
+        android:layout_above="@+id/room_name_edittext1"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/border" />
+
+</RelativeLayout>
