@@ -7,51 +7,16 @@
     tools:context="com.nitesh.firstapp.Homepage.AmbulanceList"
     android:background="@drawable/grad_bg">
 
-    <Button
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/border"
-        android:id="@+id/btn_send"
-        android:text="Send"
-        android:textColor="@color/white"/>
-
-    <EditText
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/msg_input"
-        android:layout_toStartOf="@+id/btn_send"
-        android:layout_toLeftOf="@+id/btn_send"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignTop="@+id/btn_send"
-        android:background="@drawable/border"
-        android:textColor="@color/white"/>
-
-
-    <ScrollView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:id="@+id/scrollView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignEnd="@+id/btn_send"
-        android:layout_alignRight="@+id/btn_send"
-        android:layout_above="@+id/btn_send"
-        android:layout_alignParentTop="true">
 
         <TextView
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:id="@+id/textView"
+            android:id="@+id/textViewA"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:padding="15dp"
             android:textColor="@color/white"
             android:background="@drawable/border"/>
 
-    </ScrollView>
 
 
 </RelativeLayout>

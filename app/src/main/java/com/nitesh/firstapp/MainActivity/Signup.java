@@ -27,7 +27,7 @@ public class Signup extends AppCompatActivity {
     TextView msnup;
     //CheckBox mcheckbox,mcheckbox1;
    // DatabaseReference databaseReference;
-   DatabaseReference myref;
+    DatabaseReference myref;
     FirebaseDatabase databaseReference;
     FirebaseAuth mAuth;
     ProgressDialog progressDialog;

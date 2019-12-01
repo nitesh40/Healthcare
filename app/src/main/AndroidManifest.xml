@@ -88,7 +88,7 @@
         <activity android:name=".Homepage.Testing.About" />
         <activity android:name=".TabFragment.ContentOfFirstAidFragment.Firstaid" />
         <activity android:name=".TabFragment.ContentOfFirstAidFragment.Medicine" />
-        <activity android:name=".TabFragment.ContentOfFirstAidFragment.Solution" />
+        <activity android:name=".TabFragment.ContentOfFirstAidFragment.HealthTips" />
         <activity android:name=".TabFragment.ContentOfFirstAidFragment.Disease" />
         <activity android:name=".Homepage.Chat.Chat" />
         <activity android:name=".Homepage.Chat.Chat_Room" />

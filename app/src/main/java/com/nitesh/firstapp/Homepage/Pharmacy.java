@@ -1,62 +1,80 @@
 package com.nitesh.firstapp.Homepage;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SearchView;
+import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.nitesh.firstapp.R;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 public class Pharmacy extends AppCompatActivity {
 
-    ListView msearch;
-    ArrayAdapter<String> adapter;
+    private ListView listView;
+    private ArrayAdapter<String> arrayAdapter;
+    private ArrayList<String> list_of_rooms3 = new ArrayList<>();
+    private String name;
+    private DatabaseReference root = FirebaseDatabase.getInstance().getReferenceFromUrl("https://firstapp-1966b.firebaseio.com/Element/Pharmacy");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pharmacy);
 
-        msearch=findViewById(R.id.search);
+        listView = (ListView) findViewById(R.id.listViewP);
 
-        ArrayList<String> arraySearch= new ArrayList<>();
-        arraySearch.addAll(Arrays.asList(getResources().getStringArray(R.array.search)));
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list_of_rooms3);
 
-        adapter=new ArrayAdapter<String>(
-          Pharmacy.this,android.R.layout.simple_list_item_1,arraySearch
-        );
+        listView.setAdapter(arrayAdapter);
+//        request_user_name();
 
-        msearch.setAdapter(adapter);
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.search_menu, menu);
-        MenuItem item=menu.findItem(R.id.search);
-        SearchView searchView= (SearchView) item.getActionView();
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        root.addValueEventListener(new ValueEventListener() {
             @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                Set<String> set = new HashSet<String>();
+                Iterator i = dataSnapshot.getChildren().iterator();
+
+                while (i.hasNext()) {
+                    set.add(((DataSnapshot) i.next()).getKey());
+                }
+
+                list_of_rooms3.clear();
+                list_of_rooms3.addAll(set);
+
+                arrayAdapter.notifyDataSetChanged();
             }
 
             @Override
-            public boolean onQueryTextChange(String C) {
-                adapter.getFilter().filter(C);
-                return false;
+            public void onCancelled(DatabaseError databaseError) {
+
             }
         });
 
-        return super.onCreateOptionsMenu(menu);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Intent intent = new Intent(getApplicationContext(), Pharmacy.class);
+                intent.putExtra("room_name", ((TextView) view).getText().toString());
+//                intent.putExtra("user_name",name);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -13,8 +13,8 @@ import com.nitesh.firstapp.Map.MapsActivity;
 import com.nitesh.firstapp.R;
 import com.nitesh.firstapp.TabFragment.ContentOfFirstAidFragment.Disease;
 import com.nitesh.firstapp.TabFragment.ContentOfFirstAidFragment.Firstaid;
+import com.nitesh.firstapp.TabFragment.ContentOfFirstAidFragment.HealthTips;
 import com.nitesh.firstapp.TabFragment.ContentOfFirstAidFragment.Medicine;
-import com.nitesh.firstapp.TabFragment.ContentOfFirstAidFragment.Solution;
 
 /**
  * Created by Nitesh on 8/11/2018.
@@ -76,7 +76,7 @@ public class FirstAidFragment extends Fragment  {
         msolution.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),Solution.class);
+                Intent intent=new Intent(getActivity(),HealthTips.class);
                 startActivity(intent);
             }
         });

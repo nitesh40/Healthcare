@@ -1,4 +1,4 @@
-package com.nitesh.firstapp.Homepage;
+package com.nitesh.firstapp.TabFragment.ContentOfFirstAidFragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,22 +21,21 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class Doctor extends AppCompatActivity {
-
+public class HealthTips extends AppCompatActivity {
     private ListView listView;
     private ArrayAdapter<String> arrayAdapter;
-    private ArrayList<String> list_of_rooms4 = new ArrayList<>();
+    private ArrayList<String> list_of_rooms8 = new ArrayList<>();
     private String name;
-    private DatabaseReference root = FirebaseDatabase.getInstance().getReferenceFromUrl("https://firstapp-1966b.firebaseio.com/Element/Doctor");
+    private DatabaseReference root = FirebaseDatabase.getInstance().getReferenceFromUrl("https://firstapp-1966b.firebaseio.com/FirstAid/HealthTips");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doctor);
+        setContentView(R.layout.activity_solution);
 
-        listView = (ListView) findViewById(R.id.listViewD);
+        listView = (ListView) findViewById(R.id.listViewFS);
 
-        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list_of_rooms4);
+        arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list_of_rooms8);
 
         listView.setAdapter(arrayAdapter);
 //        request_user_name();
@@ -53,8 +52,8 @@ public class Doctor extends AppCompatActivity {
                     set.add(((DataSnapshot) i.next()).getKey());
                 }
 
-                list_of_rooms4.clear();
-                list_of_rooms4.addAll(set);
+                list_of_rooms8.clear();
+                list_of_rooms8.addAll(set);
 
                 arrayAdapter.notifyDataSetChanged();
             }
@@ -70,7 +69,7 @@ public class Doctor extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                Intent intent = new Intent(getApplicationContext(), Doctor.class);
+                Intent intent = new Intent(getApplicationContext(), HealthTips.class);
                 intent.putExtra("room_name", ((TextView) view).getText().toString());
 //                intent.putExtra("user_name",name);
                 startActivity(intent);
